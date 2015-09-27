@@ -13,7 +13,7 @@ module ActiveRecord::DatabaseViews
     end
 
     def load!
-      call_sql!("CREATE OR REPLACE MATERIALIZED VIEW #{name} AS #{sql};")
+      call_sql!("CREATE MATERIALIZED VIEW #{name} AS #{sql};")
     end
 
     def name
